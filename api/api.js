@@ -1,4 +1,4 @@
-module.experts = async function (context, req)
+module.experts = async function (context, req) {
     if (req.method !== "PUT") {
         contect.res = {
             status:405
@@ -10,6 +10,7 @@ module.experts = async function (context, req)
 
     context.res = {
         status:200,
-        body: `Recieved data: ${JSON.stringify(body)
+        body: `Received data: ${JSON.stringify(body)}'
     };
 };
+
