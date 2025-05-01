@@ -1,16 +1,14 @@
-module.experts = async function (context, req) {
+module.exports = async function (context, req) {
     if (req.method !== "PUT") {
-        contect.res = {
-            status:405
+        context.res = {
+            status: 405,
             body: "Only PUT requests are allowed"
         };
         return;
     }
-    const body = req.body;
 
     context.res = {
-        status:200,
-        body: `Received data: ${JSON.stringify(body)}'
+        status: 200,
+        body: Received: ${JSON.stringify(req.body)}
     };
 };
-
